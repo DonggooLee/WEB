@@ -1,0 +1,175 @@
+<!-- 
+	테이블 (표) 태그
+	
+	1. 표를 만들 때 사용한다.
+	2. <table></table>
+	3. 행을 만들 때 <tr></tr>태그 사용
+	4. 열을 만들 때 <td></td>태그 사용
+	5. 제목 열을 만들 때 <th></th>태그 사용
+	6. 행 병합은 rowspan 속성을 이용 (rowspan="2"("합칠칸 수"))
+	7. 열 병합은 colspan 속성을 이용
+	
+	* cellpadding : 셀 내부 간격
+	* cellspacing : 셀과 셀 간격
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>3행 2열</h1>
+	<table border="1"><!-- border : 외곽선 -->
+		<tr>
+			<th>성명</th><!-- 주로 컬럼명 -->
+			<th>나이</th>
+		</tr>
+		<tr>
+			<td>김씨</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>이씨</td>
+			<td>30</td>
+		</tr>
+	</table>
+
+	<h1>3행 2열</h1>
+	<table style="border: 1px solid black;">
+		<tr>
+			<th style="background-color: aqua;">아이디</th>
+			<th>비밀번호</th>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>1234</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>4567</td>
+		</tr>
+	</table>
+	
+	<h1>열 병합 연습</h1>
+	<table border="1">
+		<tr>
+			<th colspan="2">인구조사</th>
+		</tr>
+		<tr>
+			<td>지역</td>
+			<td>인구</td>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>1000만</td>
+		</tr>
+	</table>
+	
+	<h1>행 병합 연습</h1>
+	<table border="1">
+		<tr>
+			<td colspan="2">인구조사</td>
+		</tr>
+		<tr>
+			<td rowspan="2">지역</td>
+			<td>인구</td>
+		</tr>
+		<tr>
+			<td>1000만</td>
+		</tr>
+	</table>
+	
+	<h1>연습문제1</h1>
+	<table border="1" style="width: 300px">
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>20세</td>
+			<td>서울시 마포구 노고산동</td>
+		</tr>
+		<tr>
+			<th>특기</th>
+			<td colspan="2">먹기</td>
+		</tr>
+		<tr>
+			<th rowspan="2">신체</th>
+			<td colspan="2">180.0cm</td>
+		</tr>
+		<tr>
+			<td colspan="2">83kg</td>
+		</tr>
+	</table>
+	
+	<h1>연습문제2</h1>
+	<table border="1" style="width: 300px">
+		<tr>
+			<td rowspan="5">1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td rowspan="3">10</td>
+			<td>11</td>
+			<td>12</td>
+			<td rowspan="2">13</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>17</td>
+			<td>18</td>
+		</tr>
+		<tr>
+			<td colspan="5">19</td>
+		</tr>
+	</table>
+	
+	<h1>연습문제3</h1>
+	<table border="1" style="width: 300px"><!-- style 줄때는 항상 단위를 신경써야한다 -->
+		<tr>
+			<td colspan="4">1</td>
+			<td rowspan="7">2</td>
+		</tr>
+		<tr>
+			<td rowspan="5">3</td>
+			<td rowspan="4">4</td>
+			<td colspan="2">5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td rowspan="4">7</td>
+		</tr>
+		<tr>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td colspan="2">10</td>
+		</tr>
+		<tr>
+			<td colspan="4">11</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

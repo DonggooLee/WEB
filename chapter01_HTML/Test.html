@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="#" method="post">
+	
+		<h4>연습문제 - 1</h4>
+			<label for="uId1">아이디 : </label>
+			<input type="text" id="uId1" placeholder="아이디"><br>
+			<label for="pw1">비밀번호 : </label>
+			<input type="password" id="pw1" placeholder="비밀번호"><br>
+			<input type="submit" value="로그인"><br>
+			
+		<hr>
+		
+		<h4>연습문제 - 2</h4>
+		<fieldset>
+			<label>아이디 : <input type="text" placeholder="example@naver.com"></label>
+			<label>비밀번호 : <input type="password" placeholder="비밀번호"></label>
+			<input type="submit" value="로그인"><br>
+		</fieldset>
+
+		<hr>
+		
+		<h4>연습문제 - 3</h4>
+		
+		<h1>회원가입</h1>
+		<h4>로그인 정보</h4>
+		<table>
+			<tr>
+				<td><label for="uId3">아이디</label></td>
+				<td><input type="text" id="uId3"></td>
+			</tr>
+			<tr>
+				<td><label for="pw3">비밀번호</label></td>
+				<td><input type="password" id="pw3"></td>
+			</tr>
+			<tr>
+				<td><label for="pw4">비밀번호 확인</label></td>
+				<td><input type="password" id="pw4"></td>
+			</tr>
+		</table>
+		
+		<h4>개인 정보</h4>
+		<table>
+			<tr>
+				<td><label for="name">이름</label></td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			<tr>
+				<td><label for="e-mail">메일주소</label></td>
+				<td><input type="email" id="e-mail"></td>
+			</tr>
+			<tr>
+				<td><label for="tel">연락처</label></td>
+				<td><input type="tel" id="tel"></td>
+			</tr>
+			<tr>
+				<td><label for="url">블로그/홈페이지</label></td>
+				<td><input type="url" id="url"></td>
+			</tr>
+		</table>
+		<input type="submit" value="가입하기">
+	</form>
+	
+	<hr>
+
+	<h4>연습문제 - 4</h4>
+	<form action="#" method="post">
+		<h1>회원가입</h1>
+		<h4>로그인 정보</h4>
+			<ul type="disc">
+				<li><label for="uId4">아이디 </label><input type="text" id="uId4"></li>
+				<li><label for="pw5">비밀번호 </label><input type="password" id="pw5"></li>
+				<li><label for="pw6">비밀번호 확인 </label><input type="password" id="pw6"></li>
+			</ul>
+		<h4>개인 정보</h4>
+			<ul type="disc">
+				<li><label for="name2">이름 </label><input type="text" id="name2"></li>
+				<li><label for="e-mail2">메일주소 </label><input type="email" id="e-mail2"></li>
+				<li><label for="tel2">연락처 </label><input type="tel" id="tel2"></li>
+				<li><label for="url2">블로그/홈페이지 </label><input type="url" id="url2"></li>
+			</ul>
+		<input type="submit" value="가입하기">
+	</form>
+	
+	<hr>
+	
+	<form action="#" method="post">
+		<label for="name3">이름 : </label><input type="text" id="name3" placeholder="이름"><br><br>
+		<label for="age">나이 : </label><input type="number" id="age" placeholder="나이"><br><br>
+		<label for="pw7">비밀번호 : </label><input type="password" id="pw7" placeholder="비밀번호"><br><br>
+		<label for="e-mail3">이메일 : </label><input type="email" id="e-mail3" placeholder="이메일"><br><br>
+		<fieldset>
+			<legend>성별</legend>
+			<input type="radio" name="gender" value="남자" checked="checked" id="man"><label for="man">남자</label>
+			<input type="radio" name="gender" value="여자" id="woman"><label for="woman">여자</label><br>
+		</fieldset>
+		<fieldset>
+			<legend>취미</legend>
+			<input type="checkbox" name="hobbies" value="운동" id="health"><label for="health">운동</label>
+			<input type="checkbox" name="hobbies" value="영화" id="movie"><label for="movie">영화</label>
+			<input type="checkbox" name="hobbies" value="게임" id="game"><label for="game">게임</label>
+			<input type="checkbox" name="hobbies" value="여행" id="tour"><label for="tour">여행</label>
+		</fieldset>
+		<br>
+		<label for="addr">거주지 : </label>
+		<select name="addr" id="addr">
+			<option value="seoul">서울</option>
+			<option value="gyeongi">경기</option>
+			<option value="incheon">인천</option>
+		</select>
+		<br>
+		<br>
+		<label for="resume">이력서 : </label><input type="file" id="resume">
+		<br>
+		<br>
+		<label for="coverLetter">자기 소개서</label><br>
+		<textarea rows="5" cols="100" placeholder="150자 이내 작성" id="coverLetter"></textarea>
+		<br>
+		<br>
+		<label for="expireDate">제출일 : </label><input type="date" id="expireDate">
+		<br>
+		<br>
+		<input type="submit" value="제출">&nbsp;<input type="reset" value="취소">
+	</form>
+	
+</body>
+</html>

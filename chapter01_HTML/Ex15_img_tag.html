@@ -1,0 +1,48 @@
+<!--
+	<img> 태그
+
+    1. 이미지를 삽입한다.
+    2. 속성
+        1) src : 이미지의 위치 (경로)
+        2) alt : 이미지 대신 표시할 텍스트
+    3. 경로표시
+        1) 절대 경로 : C:/dev/workspace/workspace_web/images/google.jpg
+        2) 상대 경로 : images/google.jpg	(/로 시작하면 컨텍스트 루트부터 시작)
+        3) 주요 폴더 
+            (1) .  : 현재 폴더
+            (2) .. : 상위 폴더
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		img 속성
+		- title : 이미지 타이틀
+		- style : 이미지 스타일
+		- width, height : 이미지 너비, 높이
+	 -->
+
+	<h1>이미지 표시</h1>
+	<img alt="구글이미지(심슨)" src="images/google.png"><!-- 다 동일한 WEB CONTENT 안에 들어가 있기 때문에 -->
+	<!-- alt 속성을 써야하는 이유 : 이미지를 제대로 가져오지 못할 경우 alt 값을 출력 -->
+
+	<h1>서버에 저장된 이미지</h1>
+	<img alt="서버이미지" src="https://mblogthumb-phinf.pstatic.net/MjAyMDAyMjRfMjM1/MDAxNTgyNTQ4MjU2MTYx.7DH6I3S3JHJ8ASX4RQ-hJP6tJcATGzkx34dBoIYKG9kg._oyKXp4gs2cX1r438KL3c_YtQT2kUPFwCP9aOly6Fj8g.PNG.vetline/00_%EC%95%84%EA%B8%B0%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%9E%85%EC%96%91_%EC%A4%80%EB%B9%84.PNG?type=w800">
+
+	<h1>크기를 조정한 이미지</h1>
+	<img width="300" src="https://mblogthumb-phinf.pstatic.net/MjAyMDAyMjRfMjM1/MDAxNTgyNTQ4MjU2MTYx.7DH6I3S3JHJ8ASX4RQ-hJP6tJcATGzkx34dBoIYKG9kg._oyKXp4gs2cX1r438KL3c_YtQT2kUPFwCP9aOly6Fj8g.PNG.vetline/00_%EC%95%84%EA%B8%B0%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%9E%85%EC%96%91_%EC%A4%80%EB%B9%84.PNG?type=w800">
+	<!-- 너비(width)나 높이(height) 중 하나만 조정해도 전부 다 조정된다. -->
+	
+	<img src="images/google.png" width="300" align="top">구글 로고-1<br><br>
+	<img src="images/google.png" width="300" align="middle">구글 로고-2<br><br>
+	<img src="images/google.png" width="300" align="bottom">구글 로고-3<br><br>
+	<img src="images/google.png" width="300" align="left">구글 로고-4<br><br>
+	<img src="images/google.png" width="300" align="right">구글 로고-5<br><br>
+
+</body>
+</html>
