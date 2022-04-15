@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display</title>
+<style type="text/css">
+	/* 
+		display: none;		화면에서 사라지고, 차지하는 구역도 없어진다.
+		<비교>
+		visibility: hidden; 화면에서 사라지고, 차지하는 구역은 남는다.
+	
+	 */
+	img {
+		width:300px;
+		margin:10px;
+	}
+	#img2 {
+		display: none;		 
+	}
+	#img1 {
+		visibility: hidden;
+	}
+</style>
+</head>
+<body>
+	<img id="img1" src= "./images/fruit1.jpg" alt="과일이미지1" />   
+	<img id="img2" src= "./images/fruit2.jpg" alt="과일이미지2" /> 
+	<img id="img3" src= "./images/fruit3.jpg" alt="과일이미지3" />
+</body>
+</html>
