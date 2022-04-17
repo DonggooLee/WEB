@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pseudo class</title>
+<style type="text/css">
+	/* 
+		<a> 태그의 가상 클래스
+		
+		1. a:link	: 방문하기 전 
+		2. a:visied	: 방문한 적이 있음
+		3. a:hover	: 마우스 오버(올려놓기)
+		4. a:active	: 마우스 누를 때(클릭아님)  
+	 */
+	 div {
+	 	width: 100px;
+	 }
+	 div a.btn1:link {
+	 	display: block;
+	 	padding: 10px;
+	 	text-align: center;
+	  	background:red;
+
+	 	text-decoration: none;
+	 }
+	 div a.btn1:visited {
+	 	background: pink;
+	 	color: black;
+	 }
+	 div a.btn1:hover{
+	 	background: black;
+	 	color: white;
+	 }
+	 div a.btn1:active {
+	 	background:gold;
+	 	color:blue;
+	 	border: 1px solid black;
+	 } 
+</style>
+</head>
+<body>
+	<div>
+		<a class="btn1" href="#" target="_blank">버튼 </a>
+	</div>
+</body>
+</html>
