@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>성적 확인</h1>
+	<p>평균 : <span id="avg"></span>점</p>
+	<p>학점 : <span id="grade"></span>점</p>
+	
+	<script type="text/javascript">
+		/*
+			국영수를 입력받아 평균과 학점을 출력
+			학점 : 90이상 A, 80이상 B, 70이상 C, 나머지F
+		*/
+		var kor = Number(prompt("국어점수 입력 : "));
+		var eng = Number(prompt("영어점수 입력 : "));
+		var mat = Number(prompt("수학점수 입력 : "));
+		
+		var avg = (kor+eng+mat)/3;	/* 굳이 3.0 실수 정수 구분할 필요 없다 */
+		var grade = '';
+		
+		if (avg>=90) {
+			grade = 'A';
+		} else if (avg>=80) {
+			grade = 'B';
+		} else if (avg>=70) {
+			grade = 'C';
+		} else {
+			grade = 'F';
+		}
+		
+		var avg_ = document.getElementById("avg");	// ★★★★★★ 문자열로 적기!!!
+		var grade_ = document.getElementById("grade");
+		avg_.innerHTML = avg;
+		grade_.innerHTML = grade;
+		
+		//document.getElementById("avg").innerHTML = avg; 이런 형태로도 가능하다
+	</script>
+</body>
+</html>

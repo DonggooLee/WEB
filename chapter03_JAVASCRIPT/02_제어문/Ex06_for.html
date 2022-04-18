@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var gugudan = "<table border='1'>";
+	for(var i=1; i<=9; i++){
+		gugudan += "<tr>";
+		for(var j=2; j<=9; j++){
+			gugudan += "<td>"+j+" * "+i+" = "+i*j+"</td>";
+		}
+		gugudan += "</tr>";
+	}
+	gugudan += "</table>";
+	document.write(gugudan);
+
+</script>
+</head>
+<body>
+</body>
+</html>

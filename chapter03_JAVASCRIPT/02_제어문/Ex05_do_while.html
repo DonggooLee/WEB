@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		적을 쓰러뜨려라
+		
+		1. 적은 100의 체력을 가지고 있다.
+		2. 한 번 공격할 때마다 0~29 사이의 체력을 닳게 할 수있다.
+		3. 몇 번만에 적을 쓰러뜨렸는지 횟수를 출력하시오.
+		
+		ex)
+		1회 공격 결과 : 95 체력남음
+		2회 공격 결과 : 80 체력남음
+		...
+		5회 만에 적을 쓰러뜨렸다!!
+	*/
+	var mon = 100;
+	var count = 0;
+	alert("적을 쓰러뜨려라! 적은 100의 체력을 가지고 있다.");
+	do {
+		var att = Number(prompt("공격하시겠습니까? 1.데미지는 0~29사이의 랜덤 or 2.아니오"));
+		if (att==1){
+			mon -= (Math.floor((Math.random()*29))+1);
+			count++;
+			if(mon<=0){
+				alert(count+"회 공격 결과 : 0 체력 남음");
+				alert("적쓰러뜨림");
+				break;
+			}else {
+				alert(count+"회 공격 결과 : "+mon+"체력 남음");
+			}
+		} else if (att==2) {
+			alert(mon+"체력 남음");
+		} else {
+			alert("1 또는 2 값을 입력해주세요");
+		}
+	} while (true)
+		
+	// 선생님 문제풀이
+	var enmy = 100;
+	var attack;
+	var count = 0;
+	
+	do{
+		attack = Math.floor(Math.random()*30);
+		enmy -= attack;
+		count++;
+		if(enmy<0){
+			enmy = 0;
+		}
+		document.write(count+"회 공격 결과 : "+enmy+"체력남음")
+	}while(enmy>0);
+	document.write(count+"회만에 적을 쓰러뜨렸다")
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

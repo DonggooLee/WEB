@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		순위를 입력받아 다음에 나열된 선물을 브라우저 화면에 출력하시오
+		1등 : 노트북 스피커 이어폰
+		2등 : 스피커 이어폰
+		3등 : 이어폰
+		나머지 : 꽝
+		
+		ex) 순위를 입력하세요. -> 1 or 2 or 3 or ....
+	*/
+	var sel = Number(prompt("순위를 입력하세요"));
+	switch (sel) {
+		case 1: document.write("노트북, ");
+		case 2: document.write("스피커, ");
+		case 3: document.write("이어폰");
+		break;
+		default: document.write("꽝");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

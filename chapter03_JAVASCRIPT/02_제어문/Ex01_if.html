@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		사용자로부터 아이디와 비밀번호를 입력받아 (prompt) 아이디가 "admin", 비밀번호가 1234이면
+		"관리자님 반갑습니다" 아니면  "관리자 정보가 잘못되었습니다" 라는 경고창 출력
+	*/
+	var id = prompt("아이디를 입력하세요");
+	var pw = Number(prompt("비밀번호를 입력하세요"));
+	if (id === "admin" && pw === 1234) {
+		alert("관리자님 반갑습니다.");
+	}else {
+		alert("관리자 정보가 잘못되었습니다.");
+	}
+</script>
+</head>
+<body>
+	<h1>Javascript if문, 비교연산자, 삼항연산자</h1>
+	<div id="output"></div>
+	<script type="text/javascript">
+		var output = document.getElementById("output");		
+		alert(output);											// <head> 에 있냐 또는 <body>에 있냐에 따라 출력 결과물이 다름
+																// HTML 파일을 읽을 때 위에서부터 읽기 때문에 but 시점을 조절하면 가능!
+		var x = -1;
+		if (x>0){
+			output.innerHTML = "양수<br>";
+		}else if (x<0) {
+			output.innerHTML = "음수<br>";
+		}else{
+			output.innerHTML = "0<br>"
+		}
+		
+		var age = "16";
+		if (age == 16) {
+			output.innerHTML = "== 연산자 결과 : 참<br>";
+		}else {
+			output.innerHTML = "== 연산자 결과 : 거짓<br>";
+		}
+		
+		var age = "16";
+		if (age === 16) {
+			output.innerHTML = "=== 연산자 결과 : 참<br>";
+		}else {
+			output.innerHTML = "=== 연산자 결과 : 거짓<br>";
+		}
+	
+		var x = 100;						// 이미 선언된 변수를 다시 선언해도 에러가 발생하지 않음
+		var msg = (x>0) ? "양수" : "음수";
+		output.innerHTML = msg + "<br>";
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		up down
+		
+		1. 1~20 사이의 숫자를 컴퓨터가 랜덤 생성한다.
+		2. 사용자는 prompt를 통해 그 숫자를 맞춘다
+		3. 조건
+			1) 1~20 사이를 벗어난 숫자를 입력하면 해당 작업은 무시한다.
+			2) 맞추면 "정답!", 틀리면 "오답!"
+			3) 몇 번만에 맞췄는지 카운팅도 출력한다.
+			
+		ex) "정답!"
+			10번 만에 정답을 맞췄습니다!
+	
+	*/
+	var random = (Math.floor((Math.random()*20))+1)
+	var count = 0;
+	while (true) {
+		var input = Number(prompt("1~20 사이의 숫자를 입력하세요"));
+		count++;
+		if (input!=random){
+			if (input>random){
+				alert("down")
+			} else if (input<random){
+				alert("up")
+			}
+		} else {
+			alert("정답! "+(count)+"회 만에 정답을 맞췄습니다.");
+			break;
+		}
+	}
+	
+	// 선생님 문제풀이
+	if (input<1||input>20){
+		alert("1~20 사이의 숫자로 다시 입력하세요");
+	} else {
+		count++
+		if (input==random){
+			alert("정답!");
+			document.write(count+"번 만에 정답을 맞췄습니다")
+		}else if (input>random) {
+			alert("down");
+		}else {
+			alert("up");
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
