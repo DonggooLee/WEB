@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.c1{
+		float: left;
+		padding: 0 70px 0 0;	
+	}
+</style>
+</head>
+<body>
+	<h1>상품 주문서</h1>
+	<form action="#" method="post">
+		<fieldset>
+			<legend>주문자 정보</legend>
+			<table>
+				<tr>
+					<td class="c1">이름</td>
+					<td><input type="text" placeholder="여백없이입력(필수)"></td>
+				</tr>			
+				<tr>
+					<td class="c1">전화번호</td>
+					<td>
+						<select name="addr1">
+							<option value="지역번호">지역번호</option>
+							<option value="서울">02</option>
+							<option value="광주">062</option>
+							<option value="인천">031</option>
+						</select>
+						<input type="tel" placeholder="연락가능한번호">
+					</td>
+				</tr>		
+			</table>
+		</fieldset>	
+		<fieldset>
+			<legend>배송지 정보</legend>
+			<table>
+				<tr>
+					<td class="c1">주소</td>
+					<td><input type="text" placeholder="배송받을주소(필수)"></td>
+				</tr>			
+				<tr>
+					<td class="c1">배송메모</td>
+					<td>
+						<textarea rows="6" cols="60" style="resize: none;"></textarea>
+					</td>
+				</tr>		
+			</table>
+		</fieldset>
+		<input type="submit" value="주문하기">&nbsp;<input type="reset" value="다시작성">
+	</form>
+</body>
+</html>

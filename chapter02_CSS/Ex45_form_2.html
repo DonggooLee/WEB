@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.input-label {
+		display:inline-block;
+		width: 100px;			/* display 안하면 인라인레벨이기 때문에 크기를 조절할 수 없다. */
+		float: left;			/* 배송메모를 위로 올려주는 역할 */
+	}
+	textarea {
+		resize: none;
+	}
+</style>
+</head>
+<body>
+	<h1>상품 주문서</h1>
+	<form action="#" method="post">
+		<fieldset>
+			<legend>주문자 정보</legend>
+			<div>
+				<label class="input-label">이름</label>
+				<input type="text" name="name" placeholder="여백없이입력(필수)" required="required">	<!-- required 필수 -->
+			</div>
+			<div>
+				<label class="input-label">전화번호</label>
+				<select name="tel">
+					<option value="">지역번호</option>
+					<option value="02">02</option>
+					<option value="031">031</option>
+					<option value="032">032</option>
+				</select>
+				<input type="text" placeholder="연락가능한번호">
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>배송지 정보</legend>
+			<div>
+				<label class="input-label">주소</label>
+				<input type="text" placeholder="배송받을주소(필수)" required="required">
+			</div>
+			<div>
+				<label class="input-label">배송메모</label>
+				<textarea rows="4" cols="60"></textarea>
+			</div>
+		</fieldset>
+		<input type="submit" value="주문하기">
+		<input type="reset" value="다시작성">
+	</form>
+</body>
+</html>
