@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		5개의 양수만 입력 받아서(prompt)평균 구하기 -> 반복문(while)
+		0 이하의 숫자는 입력에서 제외, 다시 입력
+		숫자 아닌 입력도 제외, 다시 입력 -> isNaN(내용)함수 이용
+	*/
+	
+	var num = 0;
+	var avg = 0;
+	var count = 0;
+	
+	while (count<5) {
+		num = Number(prompt("양수입력"));
+		if (num<0) {
+			alert("다시입력");
+			continue;
+		} else if (isNaN(num)) {
+			alert("다시입력");
+			continue;
+		} else{
+			avg += num;
+			count++;
+		}
+	}
+	document.write("평균 : "+Number(avg/5));
+	
+	// 선생님 문제풀이
+	while (count<5) {
+		num = Number(prompt("양수입력"));
+		if (num<0 || isNaN(num)) {
+			alert("다시입력");
+			continue;
+		} else{
+			avg += num;
+			count++;
+		}
+	}
+	document.write("평균 : "+avg/count);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
