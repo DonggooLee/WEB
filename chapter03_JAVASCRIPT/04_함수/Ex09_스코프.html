@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function plusTen() {
+		var a = 100;
+		a += 10;
+		document.write("<h1>"+"첫번째 : "+a+"</h1>");
+	}
+	plusTen();
+	document.write("<h1>"+"두번째 : "+a+"</h1>");	// Uncaught ReferenceError: a is not defined -> 지역변수를 외부에서 호출하려고 하기 때문!
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
