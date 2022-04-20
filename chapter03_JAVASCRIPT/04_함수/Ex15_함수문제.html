@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		현재 날짜와 시간을 다음과 같은 형식으로 출력하시오.
+		ex) 2022-04-19 오후 4:7
+	*/
+	
+	var date = new Date();
+	// 1. 함수 선언
+	function to12Tiems() {
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var hh = date.getHours();
+		var mm = date.getMinutes();
+		
+		var time = '';
+		var ampm = "";
+		if(hh<13){
+			ampm = "오전";
+		}else{
+			ampm = "오후";
+		}
+		time = (y + "-" + m + "-" + d + " " + ampm + " " + (hh>=13 ? (hh-12) : hh) + " : " + mm);
+		return time;
+	}
+	// 2. 함수 호출
+	document.write(to12Tiems(date));
+	
+	/* 선생님 문제 풀이 */
+	function to12Times(date){
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		
+		var h = date.getHours();
+		var ampm = (h < 12) ? "오전" : "오후";
+		var min = date.getMinutes();
+		
+		var result = y + "-" + m + "-" + d + " " + ampm + " " + (h>12 ? h-12 : h) + " :" + min;
+		return result;
+	}
+	document.write(to12Times(new Date()));
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function sayHello(n) {
+		// 해당 함수를 재귀하여 "Hello" 문구를 5번 출력
+		// 3. 조건 - 재귀 종료 시점
+		if(n>0){
+			// 1. 출력
+			document.write("<h1>Hello</h1>");
+			// 2. 재귀 - 자기 자신 호출
+			sayHello(n-1);
+		}
+	}
+	sayHello(5);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="clock"></h1>
+	<script type="text/javascript">
+		// makeZeroNum 함수 이용
+		function makeZeroNum(num) {
+			var numStr = "" + num;
+			while(true){
+				if(numStr.length>=2){
+					break;
+				}
+				numStr = "0" + numStr;			
+			}
+			return numStr;
+		}
+		// 함수 정의
+		function watch() {
+			var date = new Date();
+			var y = date.getFullYear();
+			var m = date.getMonth()+1;
+			var d = date.getDate();
+			var hh = date.getHours();
+			var mm = date.getMinutes();
+			var ss = date.getSeconds();
+			
+			var time = (y + "-" + makeZeroNum(m) + "-" + makeZeroNum(d) + " " + makeZeroNum(hh) + ":" + makeZeroNum(mm) + ":" + makeZeroNum(ss));
+			
+			document.getElementById("clock").innerHTML = time;
+			
+			setTimeout(watch, 1000);
+		}
+		// 함수 호출
+		watch();
+	</script>
+</body>
+</html>

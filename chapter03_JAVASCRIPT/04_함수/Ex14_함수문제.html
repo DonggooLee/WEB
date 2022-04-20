@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* 
+		Q. 정수를 n자리로 맞춰서 사용하기 
+		ex) makeZeroNum( num, 2 ) => 01, 02, 03,...
+		ex) makeZeroNum( num, 3 ) => 001, 002, 003,...
+		ex) makeZeroNum( num, 4 ) => 0001, 0002, 0003,...
+	*/
+	
+	function makeZeroNum(num, n) {
+		var numStr = "" + num;
+		while(true){
+			if(numStr.length>=n){
+				break;
+			}
+			numStr = "0" + numStr;			
+		}
+		return numStr;
+	}
+	
+	for(var i=1; i<=10; i++){
+		document.write("<h3>"+makeZeroNum(i, 3)+"</h3>")
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
