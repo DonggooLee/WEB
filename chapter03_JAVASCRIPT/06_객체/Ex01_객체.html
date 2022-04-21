@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/*
+		객체 생성
+		var 객체명 = {속성:값, 속성:값, ...};
+	
+		객체 프로퍼티(속성) 접근
+		1. 마침표 표기법
+			객체명.프로퍼티
+		2. 대괄호 표기법
+			객체명["프로퍼티"]
+		
+		* 객체명이 없는 객체가 있을 수도 있다.
+	*/
+	
+	// 1. 객체 생성
+	var obj = {name:"김씨", age:55, company:"삼성전자"};
+
+	// 2. 객체 속성(프로퍼티) 접근 -> style 줄 때 차이가 난다.
+	document.write("<h1>"+obj.name+"</h1>")			// .표기법
+	document.write("<h1>"+obj["age"]+"</h1>")		// []표기법 -> 키값을 "문자열"로 찾는다!
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

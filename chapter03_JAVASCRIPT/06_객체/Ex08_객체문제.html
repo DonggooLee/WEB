@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/*
+		1. 빈 객체 car 생성
+		2. 객체 car에 동적으로 프로퍼티 추가
+			1) model = 아무거나
+			2) speed = 0;
+			3) oil = 50;
+			4) MAX_SPEED = 100;
+			5) speedUp 함수 - speed 10 증가시 oil 5 사용
+			5) speedDown 함수 - speed 감소에 oil 미사용
+	*/
+
+	var car = {};
+	car.model = "그랜져";
+	car.speed = 0;
+	car.oil = 50;
+	car.Max_SPEED = 100;
+	
+	car.speedUp = function() {
+		if(this.oil>=5){
+			this.oil -= 5;
+			this.speed += 10;
+			if(this.speed >= this.Max_SPEED){
+				this.speed = this.Max_SPEED;
+			}
+		}
+	}
+	
+	car.speedDown = function() {
+		this.speed -= 10;
+		if(this.speed<0){
+			this.speed = 0;
+		}
+	}
+	
+	document.write("현재 속도 : " + car.speed + " 잔여 기름량 : " + car.oil + "<br>");
+	car.speedUp();
+	car.speedUp();
+	car.speedUp();
+	document.write("현재 속도 : " + car.speed + " 잔여 기름량 : " + car.oil + "<br>");
+	car.speedDown();
+	document.write("현재 속도 : " + car.speed + " 잔여 기름량 : " + car.oil + "<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
