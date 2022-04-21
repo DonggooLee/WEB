@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var win;
+	
+	function winOpen() {
+		var f = "width=400, height=400";
+		win = window.open("","",f);
+	}
+
+	function winClose() {
+		if(win){
+			win.close();
+		}
+	}
+	
+	// 창 이동하기
+	// 1) moveTo(x,y) : 스크린 기준으로[x,y] 방향으로 이동
+	// 2) moveBy(x,y) : 현재 창의 위치 기준으로[x,y] 방향으로 이동
+	// x,y 기준 > 왼쪽 상단 위 [0,0]
+	function moveUp() {
+		win.focus();
+		win.moveBy(0,-20);
+	}
+	function moveDown() {
+		win.focus();
+		win.moveBy(0,20);
+	}
+	function moveLeft() {
+		win.focus();
+		win.moveBy(-20,0);
+	}
+	function moveRight() {
+		win.focus();
+		win.moveBy(20,0);
+	}
+
+</script>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="창 열기" onclick="winOpen();"><br>
+		<input type="button" value="창 닫기" onclick="winClose();"><br>
+		<input type="button" value="위로 이동" onclick="moveUp();"><br>
+		<input type="button" value="아래로 이동" onclick="moveDown();"><br>
+		<input type="button" value="왼쪽으로 이동" onclick="moveLeft();"><br>
+		<input type="button" value="오른쪽으로 이동" onclick="moveRight();"><br>
+	</form>
+</body>
+</html>

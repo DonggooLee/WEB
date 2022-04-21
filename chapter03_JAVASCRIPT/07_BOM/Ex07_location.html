@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		document.write("location href : " + location.href + "<br>");			// 페이지 이동 수단
+		document.write("location hostname : " + location.hostname+ "<br>");
+		document.write("location pathname : " + location.pathname + "<br>");
+		function winGo1() {
+			location.href = "https://google.com";
+		}
+		function winGo2() {
+			location.replace("https://google.com");
+		}
+		
+</script>
+</head>
+<body>
+	<form action="#" method="get">
+		<input type="button" value="히스토리 남기고 이동" onclick="winGo1()">
+		<br>
+		<input type="button" value="히스토리 남기지 않고 이동" onclick="winGo2()">
+	</form>
+</body>
+</html>

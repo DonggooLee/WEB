@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var win;
+	
+	function winOpen() {
+		var f = "width=400, height=400";
+		win = window.open("","",f);
+	}
+	
+	function winFocus() {
+		win.focus();
+	}
+
+	function winClose() {
+		if(win){
+			win.close();
+		}
+	}
+	
+	function winCheck() {
+		if(!win){
+			alert("새 창이 열린 적이 없습니다.");
+		}else{
+			if(win.closed){
+				alert("새 창이 닫혔습니다.");
+			}else{
+				alert("새 창이 열려있습니다.");
+			}
+		}
+	}
+
+</script>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="창 열기" onclick="winOpen();"><br>
+		<input type="button" value="창 선택" onclick="winFocus();"><br>
+		<input type="button" value="창 닫기" onclick="winClose();"><br>
+		<input type="button" value="창이 열려 있는가?" onclick="winCheck();"><br>
+	</form>
+</body>
+</html>
