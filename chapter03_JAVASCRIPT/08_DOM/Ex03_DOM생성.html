@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+		var fruits = ["apple","banana","orange","kiwi","mango"];
+		위 배열을 이용하여 list 완성
+	*/
+	onload = function() {
+		var fruits = ["apple","banana","orange","kiwi","mango"];
+		// <ul> 태그 가져오기
+		var ul = document.getElementById("list");
+		for(var i=0; i<fruits.length; i++){
+			// <li> 태그 만들기
+			var li = document.createElement("li");
+			// 배열에 저장된 데이터로 텍스트노드 만들기
+			var fName = document.createTextNode(fruits[i]);
+			// <li> 태그 안에 과일을 집어넣기
+			li.appendChild(fName);
+			ul.appendChild(li);
+		}
+	}
+</script>
+</head>
+<body>
+	<ul id="list"></ul>
+</body>
+</html>

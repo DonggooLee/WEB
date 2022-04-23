@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+		1. document.createElement(element)						: element(요소) 생성
+		2. document.removeElement(element)						: element(요소) 삭제
+		3. document.appendChild(element)						: element(요소) 추가
+		4. document.replaceChild(new element, old element)		: old element -> new element 변경
+	*/
+	onload = function() {
+		// 1. <h1> 태그 만들기
+		var headElement = document.createElement("h1");
+		
+		// 2. 텍스트 노드 만들기
+		var textNode = document.createTextNode("Hello javascript");
+		
+		// 3. <h1> 태그에 텍스트 노드 추가하기
+		headElement.appendChild(textNode);
+		// document.createElement("h1").appendChild(document.createTextNode("Hello javascript")); 위와 동일한 코드
+		
+		// 4. <h1> 태그를 <body>에 추가하기
+		document.body.appendChild(headElement);
+	}
+</script>
+</head>
+<body>
+	<h1>안녕 자바스크립트</h1>
+</body>
+</html>

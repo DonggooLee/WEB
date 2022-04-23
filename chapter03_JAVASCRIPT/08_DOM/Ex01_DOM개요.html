@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+	DOM : Document Object Model (문서 객체 모델)
+	
+	1. 웹 문서를 로드할 때 브라우저는 구성요소들을 트리 구조의 DOM으로 생성한다.
+	2. DOM을 통해서 HTML 구성요소들을 획득, 추가, 변경, 삭제 등이 가능 하다.
+	3. 주요 선택 메소드
+		1) document.getElementById("태그")
+		2) document.getElementsByTagName("태그")  		--> getElements : 리턴이 여러개 이다.
+		3) document.getElementsByClassName("클래스") 		--> class 를 사용했던 이유는 style을 주려고
+		4) document.querySelector("선택자")				--> 아이디 등 하나만 사용할 때! ( 1)번과 차이 알아두기 ★★★ )
+		5) document.querySelectorAll("선택자")			--> 클래스나 태그명 등 여러개 사용할 때!
+	4. 주요속성
+		1) innerHTML : 내부 글자 변경
+		2) style.css속성 : 스타일 변경						--> 12_DOM_style 참고 ★
+			style[css속성]
+		3) attribute : 속성 변경 (attribute가 속성명이 아니고, id, class 등 속성 그 자체!!)
+			(1) document.getElementById("box").class = "wrap";
+			(1) document.getElementById("a").href = "http://www.naver.com";
+			- attribute 처리 getter/setter
+				가. setAttribute(송성, 값)		: 속성에 값을 준다.
+				나. getAttribute(속성)		: 속성에 값을 읽어온다.
+	*/
+
+	// <body> 태그를 모두 읽은 후에 처리되는 onload
+	window.onload = function() {
+		var msg = document.getElementById("title");
+		document.write("<h1>")
+		document.write(msg.innerHTML="홈페이지에 오신 걸 환영합니다!");
+		document.write("</h1>")
+	}
+</script>
+</head>
+<body>
+	<h1 id="title"></h1>
+</body>
+</html>

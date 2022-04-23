@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// setTimeout 함수를 이용하여 무지개 색 변환 (1초 단위)
+	var idx = 0; 
+	var colors = ["red","orange","yellow","green","blue","navy","purple"];
+	var content = ["빨","주","노","초","파","남","보"];
+		
+	var rainbow = function() {
+		document.querySelector("#text").innerHTML = content[idx];
+		document.querySelector("#box").style.backgroundColor = colors[idx];
+		idx++;
+		if(idx==7){
+			idx = 0;
+		}
+		setTimeout(rainbow,1000)	// 함수를 매개변수로 던질땐 ()가 없어야 한다.
+	}
+	
+	onload = function() {
+		rainbow();
+	}
+</script>
+<style type="text/css">
+	#box{
+		width: 100px;
+		height: 100px;
+		color: white;
+		background-color: red;
+		text-align: center;		/* 가로 방향 가운데 정렬 */
+		display: table-cell;	/* 테이블의 셀로 변경 -> 수직 정렬 하기 위해서 */
+		vertical-align: middle;	/* 세로 방향 가운데 정렬 */
+	}
+	#text{
+		font-size: 20px;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+		<p id="text">빨</p>
+	</div>
+</body>
+</html>
