@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+		디폴트 이벤트 (기본이벤트) : 원하면 막을 수 있다.
+		1. 폼을 submit 하면 모든 폼 요소를 보내고, 초기화 한다.
+		2. a 태그를 클릭하면 페이지 이동한다.
+	*/
+	onload = function() {
+		// 1. 폼 submit 방지
+		var form = document.getElementById("form");
+		form.onsubmit = function(e) {
+			e.preventDefault();
+		}
+		// 2. <a>태그의 이동 방지
+		var a = document.getElementById("a");
+		a.onclick = function(e) {
+			e.preventDefault();
+		}
+	}
+</script>
+</head>
+<body>
+	<form action="#" id="form">
+		<input type="text">
+		<input type="submit">
+	</form>
+	<br>
+	<a href="http://www.google.com" id="a">구글로 이동</a>
+</body>
+</html>

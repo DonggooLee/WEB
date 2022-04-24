@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* function func1() {
+		// box의 안에 내용 변경 -> "안녕하세요";
+		document.getElementById("box").innerHTML = "안녕하세요";
+	}
+	function func2() {
+		// box의 안에 내용 변경 -> "안녕히가세요";
+		document.getElementById("box").innerHTML = "안녕히가세요";
+	} */
+	// 인라인 이벤트 지우고
+	// 스크립트에서 box에 onmouseover, onmouseout 이벤트로 같은 내용진행
+	onload = function(){
+		var box = document.getElementById("box")
+		box.onmouseover = function() {
+			box.innerHTML = "안녕하세요";
+		}
+		box.onmouseout = function() {
+			box.innerHTML = "안녕히가세요";
+		}
+		/* box.onmousedown	= function() {
+			box.innerHTML = "down";
+		}
+		box.onmouseup	= function() {
+			box.innerHTML = "up";
+		} */
+	}
+</script>
+</head>
+<body>
+	<div id="box">
+	<!-- onmouseover="func1();" onmouseout="func2();" -->
+	마우스를 올려보세요!
+	</div>
+</body>
+</html>

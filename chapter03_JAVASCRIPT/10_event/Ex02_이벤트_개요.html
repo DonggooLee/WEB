@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function init() {
+		document.body.style.backgroundColor = "silver";
+	}
+	// onload = init;	// 대입 또는 매개변수로 던질때 괄호 필요가 없다.
+</script>
+</head>
+<body onload="init();">	<!-- 인라인 방식 : 태그내에 직접 주는 방식 -->
+
+	<h1 onclick="window.location.href='http://www.google.com'">구글로 이동</h1>
+	
+	<input type="button" value="클릭" id="btn">
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick = function() {
+			alert("눌렀니?");
+			btn.onclick = null;	// 이벤트 해제 : 한번만 클릭 한 다음 onclick 값에 null을 넣어서 더이상 실행되지 않게 만든다.
+		}
+	</script>
+	
+</body>
+</html>

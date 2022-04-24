@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	onload = function() {
+		var h = document.getElementById("heading");
+		// h 객체에 클릭 이벤트 설정
+		// 클릭 시 내용 변경
+		// 1. "바뀐 제목입니다."
+		// 2. 배경 색 = "gold" 변경
+		h.onclick = function() {
+			alert(this);
+			this.innerHTML = "바뀐 제목입니다.";
+			this.style.backgroundColor = "gold";
+		}
+	}
+</script>
+</head>
+<body>
+	<h1 id="heading">원래 제목</h1>
+</body>
+</html>
