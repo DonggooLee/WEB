@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sandData() {
+		var form = document.forms.myForm;
+		// 1. 성명 : 필수 + 2~6자 사이
+		// "성명은 2~6자 사이로 입력해야 합니다!" 출력
+		/* var userName = document.forms.myForm.name;
+		if(userName='' || userName.value.length<2 || userName.value.length>6){
+			alert("성명은 2~6자 사이로 입력해야 합니다!");
+			userName.focus();
+			return;
+		} */
+		var name = form.name;
+		if(name.value.length < 2 || name.value.length > 6){
+			alert("성명은 2~6자 사이로 입력해야 합니다!");
+			name.focus();		// 그 칸으로 이동시킨다!
+			name.value = '';	// 빈 문자열로 바꾼다!
+			return;
+		}
+		// 2. 이메일 : @포함 + 첫 글자 @체크 + 마지막 글자 @체크
+		// "이메일이 올바른 형식이 아닙니다!" 출력
+		/* var userEmail = document.forms.myForm.email;
+		if(userEmail.value.indexOf("@")==-1 || userEmail.value.startsWith("@") || userEmail.value.endsWith("@")){
+			alert("이메일이 올바른 형식이 아닙니다!");
+			userEmail.focus();
+			return;
+		} */
+		var email = form.email;
+		var indexOfAt = email.value.indexOf("@");
+		/* 
+			@가 처음 값이거나 마지막 값인 경우, @를 찾기 못한 경우
+			indexOfAt : 0 -> 처음
+			indexOfAt : length-1 -> 마지막 글자
+			indexOfAt : -1 -> 없을 때
+		*/
+		if(indexOfAt == 0 || indexOfAt == email.value.length-1 || indexOfAt == -1){
+			alert("이메일이 올바른 형식이 아닙니다!");
+			email.focus();
+			email.value = '';
+			return;
+		}
+		// 3. 우편번호 : 5자 + 숫자
+		// "우편번호는 5자리 숫자로 입력해야 합니다!" 출력
+		/* var userZipcode = document.forms.myForm.zipcode;
+		if(userZipcode.value.length!=5 || isNaN(userZipcode.value)){
+			alert("우편번호는 5자리 숫자로 입력해야 합니다!");
+			userZipcode.focus();
+			return;
+		} */
+		var zipcode = form.zipcode;
+		if(zipcode.value.length != 5 || isNaN(zipcode.value)){
+			alert("우편번호는 5자리 숫자로 입력해야 합니다!");
+			zipcode.focus();
+			zipcode.value = '';
+			return;
+		}
+		// 4. 지역 : 선택
+		// "지역을 선택하세요!" 출력
+		/* var userRegion = document.forms.myForm.region;
+		if(userRegion.value==="0"){
+			alert("지역을 선택하세요!");
+			userRegion.focus();
+			return;
+		} */
+		var region = form.region;
+		if(region.value==="0"){		// 문자열로 반환되기 때문에 비교도 문자열로 해야한다 "===" 연산자 사용
+			alert("지역을 선택하세요!");
+			region.focus();
+			region.value = '';
+			return;
+		}
+		form.submit();	// 서버로 데이터 보내기
+	}
+</script>
+</head>
+<body>
+	<form action="#" name="myForm" method="get">	<!-- method="get" 방식일때 주소창에 ? 다음에 쿼리값이 나온다 -->
+		<table>
+			<tr>
+				<td>성명</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td>우편번호</td>
+				<td><input type="text" name="zipcode" maxlength="5"></td>	<!-- maxlength : 들어갈 수 있는 글자의 최대 길이 -->
+			</tr>
+			<tr>
+				<td>지역</td>
+				<td>
+					<select name="region">
+						<option value="0">::지역선택::</option>
+						<option value="1">서울</option>
+						<option value="2">인천</option>
+						<option value="3">경기</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="button" value="전송" onclick="sandData();"></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

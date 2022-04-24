@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		form의 name 속성을 통해서 form요소를 획득하기
+		1) .표기법 : document.forms.폼name.요소name
+		2) []표기법 : document.forms["폼name"]["요소name"]
+	*/
+	function gologin() {
+		// 반드시 입력되도록 처리하고, 입력이 없으면 function 강제 종료
+		var userId = document.forms.myForm.id;
+		if(userId.value == ''){
+			alert("아이디는 반드시 입력해야 합니다.");
+			userId.focus();
+			return;
+		}
+		// 비밀번호는 반드시 입력되고, 8~16자 사이 입력되도록 처리
+		var userPw = document.forms.myForm.pw;
+		if(userPw.value == '' || userPw.value.length < 8 || userPw.value.length > 16){
+			alert("비밀번호는 반드시 8~16자 사이로 입력해야 합니다.");
+			userPw.focus();
+			return;
+		}
+		// submit 동작 (일반버튼도 서버로 데이터를 전송해줘야 한다.)
+		document.forms.myForm.submit();
+	}
+</script>
+</head>
+<body>
+	<form action="#" method="post" name="myForm">
+		<label>아이디 <input type="text" id="uId" name="id"></label><br>
+		<label>비밀번호 <input type="password" id="uPw" name="pw"></label><br>
+		<input type="button" value="로그인" onclick="gologin();">
+	</form>
+</body>
+</html>

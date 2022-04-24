@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check() {
+		var num = document.forms.myForm.num;
+		var check = document.querySelector("#result")
+		if(num.value>=1 && num.value<=10){
+			check.innerHTML = "정상 범위 입니다.";
+			/* check.style.color = "blue"; */
+			check.setAttribute("class","a")
+		} else {
+			check.innerHTML = "비정상 범위 입니다.";
+			/* check.style.color = "red"; */
+			check.setAttribute("class","b")
+		}
+	}
+</script>
+<style type="text/css">
+	.a{
+		color: blue;
+	}
+	.b{
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<form action="#" name="myForm">
+		1~10 사이 정수 
+		<input type="number" id="num" name="num">
+		<input type="button" value="검증" onclick="check();">
+	</form>
+	<br>
+	<div id="result"></div>
+</body>
+</html>
