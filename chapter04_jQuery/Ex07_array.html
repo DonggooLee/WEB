@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var list = [
+			{name: "homor", age:34},
+			{name: "bart", age:10},
+			{name: "lisa", age:8},
+		]
+		var innerHtml = '';	
+		$.each(list, function(index, item) { 	// 아이템은 배열 안에들어있는 요소 3개
+			innerHtml += "<h3>이름 : " + item.name + ", 나이 : " + item.age + "</h3>";
+			// $("body").append(innerHtml); 	// 배열을 순회하면서 하니씩 집어 넣는건 좋은 방법 X
+		});
+		$("body").append(innerHtml); 			// 문자열을 한번에 모아서 집어넣는게 더 효율적 추천하는 방법 ★★
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

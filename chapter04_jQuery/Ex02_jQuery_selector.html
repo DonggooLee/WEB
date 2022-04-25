@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	/*
+		$("tag");	: 해당 태그 요소 선택
+		$("*")		: 모든 요소
+		$(this)		: 현 HTML 에 있는 요소 선택
+		$("#id")	: id가 정의된 요소를 선택
+		$(".class")	: class가 정의된 요소를 선택
+	*/
+	$(function() {
+		// 1. 자바스크립트
+		/* document.getEle mentById("pa").onclick = function(){} */
+		
+		// 2. 제이쿼리
+		$("#pa").click(function() {
+			$(".pb").hide();
+		});
+	});	
+</script>
+</head>
+<body>
+	<h2>h2 태그</h2>
+	<p id="pa">첫 번째 p태그</p>
+	<p class="pb">두 번째 p태그</p>
+	<button id="idbtn">첫 번째 버튼</button>
+	<button class="classbtn">두 번째 버튼</button>
+	<button>세 번째 버튼</button>
+</body>
+</html>

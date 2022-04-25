@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.4.1.js"></script>
+<style type="text/css">
+	.red{
+		color: red;
+	}
+	.blue{
+		color: blue;
+	}
+	.important{
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		//setCSS를 클릭시 스타일 변경
+		// 1. 글씨 크기 20px, 배경 색 orange, 외곽선 (실선 1px 회색), 가운데 정렬
+		$("#setCSS").click(function(){
+			$(this).css({
+				backgroundColor:"orange", 			// 마침표 방식으로도 가능
+				"font-size":"20px", 
+				"text-align":"center", 
+				"border":"1px solid gray"
+			});
+		});
+		
+		$("#add-class").click(function() {
+			$("#setCSS").addClass("red");			// red 라는 클래스를 추가
+		});
+		
+		$("#remove-class").click(function() {
+			$("#setCSS").removeClass("red");		// red 라는 클래스를 삭제
+		});
+		
+		$("#toggle-class").click(function() {
+			$("#setCSS").toggleClass("important");	// 버튼 하나로 on-off 가능
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>jQery CSS 변경방법</h1>
+	<p id="setCSS">jQery CSS</p>
+	<hr>
+	<h1>CSS 클래스 추가 / 제거</h1>
+	<p id="p1">단락1</p>
+	<p id="p2">단락2</p>
+	<p id="p3">단락3</p>
+	<button id="add-class">클래스 추가</button>	
+	<button id="remove-class">클래스 제거</button>	
+	<button id="toggle-class">클래스 토글</button>	
+</body>
+</html>

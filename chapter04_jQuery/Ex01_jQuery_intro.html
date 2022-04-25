@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--  1. 오프라인에 jqery-3.4.1.js 파일 추가  -->
+<script src="js/jquery-3.4.1.js"></script>
+
+<!--  2. 온라인 CDN 이용  -->
+<!-- 새로운 버전과 이전 버전의 코드간 호환성에 문제가 발생할 시 처리 방법(마이그레이션) -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script> <!-- 마이그레이션: 하위버전 호환 -->
+<script type="text/javascript">
+	/* 
+		jQuery 형식
+		$(selector).action();
+		$ 기호 : jQuery를 정의하고 jQuery를 호출하여 사용할 수 있다.
+		selector : HTML 요소를 찾는 역할
+		action() : 선택된 요소가 행하는 동작을 명시
+		
+		1. 자바 스크립트 페이지 로드 이벤트
+		window.onload = function(){}
+		
+		2. 제이쿼리 페이지 로드 이벤트
+		$(function() {
+
+		});
+	*/
+	$(function() {
+		alert("안녕하세요");
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

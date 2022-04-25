@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.hot{
+		background-color: hotpink;
+	}
+	.cold{
+		background-color: aqua;
+	}
+</style>
+<script src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//$.each(arr, function(index, ele){});
+		//$(선택자).each(function(index, ele){});
+		$("#btn").click(function() {
+			$("li").each(function(i, ele) {
+				if(i%2==0){
+					$(this).toggleClass("cold");
+				}else {
+					$(ele).toggleClass("hot");
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>jQuery	each() 함수</h1>
+	<ul>
+		<li>Java</li>
+		<li>DB</li>
+		<li>CSS</li>
+		<li>HTML</li>
+		<li>JavaScript</li>
+		<li>jQuery</li>
+	</ul>
+	<button id="btn">Toggle Style</button>
+	동구님 되게 키보드도 낮은거, 마우스도 낮은거 쓰시네욤
+	굿굿 ^^! 동구님 화이팅 하세요^^*! 우주최강 동구님
+	빛과 소금 동궁님!222222222222222222222222222222222222222222222222222
+</html>

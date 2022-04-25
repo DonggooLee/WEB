@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 자바스크립트 스타일
+		// 요소.style.스타일명 = 값;
+		
+		// 제이쿼리 스타일
+		// 1. 단일 옵션 적용
+		$(".html").css("color","yellow");
+		$(".css").css("color","red");
+		
+		// 2. 다중 옵션 적용 ({}중괄호 표시, 대괄호 표기법)
+		$("h1").css({"color":"blue","font-size":"20px"});
+		$(".wrap").css({"background-color":"pink"});
+		$("#web").css({"list-style-type":"square"});
+		$("li").css({"font-size":"20px","background-color":"green"})	// 아래 코드와 $() <- 사이의 값만 차이
+		/* $("ul li").css({"font-size":"20px","background-color":"green"})
+			$("#web li").css({"font-size":"20px","background-color":"green"}) */
+	});
+</script>
+</head>
+<body>
+	<h1>jQuery</h1>
+	<div class="wrap">
+		<ul id="web">
+			<li class="html">html</li>
+			<li class="css">css</li>
+			<li class="javascript">javascript</li>
+			<li class="jquery">jquery</li>
+			<li class="ajax">ajax</li>
+		</ul>
+	</div>
+</body>
+</html>
