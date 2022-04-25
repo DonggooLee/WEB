@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+		뒤로가기 및 새로고침 금지
+		-> 뒤로 가기 버튼이 눌리면 "뒤로가기 사용금지!" 출력 후 기능 정지
+		-> 새로 고침 버튼이 눌리면 "새로고침 사용금지!" 출력 후 기능 정지
+	*/
+	document.onkeydown = function(e) {
+		// onkeydown 이라는 익명함수를 실행 시키면 e로 받겠다.
+		var key = e.keyCode;
+		// 뒤로 가기 : 8, 새로 고침 : 116
+		if(e.keyCode==8){
+			alert("뒤로가기 사용금지!");
+			e.preventDefault();
+		}
+		if(key==116){
+			alert("새로고침 사용금지!");
+			e.preventDefault();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>새로고침(F5)과 뒤로가기(BackSpace) 금지 페이지</h1>
+</body>
+</html>

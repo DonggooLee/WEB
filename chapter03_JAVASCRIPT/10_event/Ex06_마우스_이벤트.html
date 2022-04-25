@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	onload = function(){
+	 	box.onmousedown	= function() {
+			box.innerHTML = "down";
+		}
+		box.onmouseup	= function() {
+			box.innerHTML = "up";
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="box" onmousedown="func1(this)" onmouseup="func2(this)">  <!-- 클릭하려고 눌렀을때 : down 손을 떼면 : up  -->
+		마우스를 눌러보세요!
+	</div>
+</body>
+</html>
